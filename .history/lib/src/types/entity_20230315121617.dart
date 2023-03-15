@@ -266,27 +266,27 @@ class AssetPathEntity extends Equatable {
     );
   }
 
-//   @override
-//   bool operator ==(Object other) {
-//     if (identical(this, other)) return true;
-// // hesham
-//     return other is AssetPathEntity &&
-//         id == other.id &&
-//         name == other.name &&
-//         albumType == other.albumType &&
-//         type == other.type &&
-//         lastModified == other.lastModified &&
-//         isAll == other.isAll;
-//   }
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+// hesham
+    return other is AssetPathEntity &&
+        id == other.id &&
+        name == other.name &&
+        albumType == other.albumType &&
+        type == other.type &&
+        lastModified == other.lastModified &&
+        isAll == other.isAll;
+  }
 
-  // @override
-  // int get hashCode =>
-  //     id.hashCode ^
-  //     name.hashCode ^
-  //     albumType.hashCode ^
-  //     type.hashCode ^
-  //     lastModified.hashCode ^
-  //     isAll.hashCode;
+  @override
+  int get hashCode =>
+      id.hashCode ^
+      name.hashCode ^
+      albumType.hashCode ^
+      type.hashCode ^
+      lastModified.hashCode ^
+      isAll.hashCode;
 
   @override
   String toString() {
@@ -294,6 +294,7 @@ class AssetPathEntity extends Equatable {
   }
 
   @override
+  // TODO: implement props
   List<Object?> get props => [id, name, albumType, type, lastModified, isAll];
 }
 
