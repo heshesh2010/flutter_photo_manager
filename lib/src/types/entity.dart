@@ -268,7 +268,7 @@ class AssetPathEntity {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-
+// hesham
     return other is AssetPathEntity &&
         id == other.id &&
         name == other.name &&
