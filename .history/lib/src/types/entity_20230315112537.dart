@@ -267,10 +267,10 @@ class AssetPathEntity {
 
   @override
   bool operator ==(Object other) {
-    if (identical(this, other)) return true;
-
-    return other is AssetPathEntity &&
-        id == other.id &&
+    if (other is! AssetPathEntity) {
+      return false;
+    }
+    return id == other.id &&
         name == other.name &&
         albumType == other.albumType &&
         type == other.type &&
